@@ -32,14 +32,14 @@ This project implements a complete, hybrid sentiment analysis pipeline capable o
 
 ### Task 4: Scalability and Distributed Processing
 *   **Implementation Location:** WSL Linux / Ubuntu environment (`/home/nisha/cse/hadoop`)
-*   **Execution Framework:** Apache Hadoop 3.3.6 Single-Node Cluster (HDFS & MapReduce Streaming)
+*   **Execution Framework:** Apache Hadoop 3.3.6 Single-Node Cluster [pseudo Master-Node] (HDFS & MapReduce Streaming)
 *   **Details:** Processed millions of lines of unstructured data within HDFS. Resolved system-level WSL port conflicts by remapping conflicting network bindings (`dfs.datanode.address` moved to `9876` and Secondary NameNode UI moved to `9869`). Executed the MapReduce engine natively using the Hadoop Streaming JAR utility to generate global word aggregation counts:
     *   **Negative Records:** 34,645
     *   **Neutral Records:** 53,514
     *   **Positive Records:** 70,440
 
 ### Task 5: Insights, Interpretation, and Visualizations
-*   **Implementation Location:** Jupyter Notebook (Visual Plots)
+*   **Implementation Location:** Jupyter Notebook (Visual Plots) & hdfs as well (~/sentiment_project/visuals.py)
 *   **Execution Framework:** Matplotlib, Seaborn, and WordCloud
 *   **Details:** Rendered deep analytical representations including a categorical sentiment bar chart distribution, high-frequency word clouds for positive vs. negative classes, and a performance confusion matrix heatmap.
 
